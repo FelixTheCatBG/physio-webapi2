@@ -1,3 +1,3 @@
-# physio-webapi2
+Web API University project
 
-A quick description of physio-webapi2.
+NodeJS/Express Web API with headless CMS Strapi
