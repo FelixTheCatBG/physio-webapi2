@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "exercises",
+  "collectionName": "Physiotherapists",
   "info": {
-    "name": "exercises",
+    "name": "physiotherapists",
     "description": ""
   },
   "options": {
@@ -10,14 +10,14 @@
   },
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
       "type": "string"
     },
-    "videoLink": {
+    "contact": {
       "type": "string"
+    },
+    "patients": {
+      "collection": "patients",
+      "via": "physiotherapist"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/physiotherapists",
+      "handler": "Physiotherapists.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/physiotherapists/count",
+      "handler": "Physiotherapists.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/physiotherapists/:_id",
+      "handler": "Physiotherapists.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/physiotherapists",
+      "handler": "Physiotherapists.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/physiotherapists/:_id",
+      "handler": "Physiotherapists.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/physiotherapists/:_id",
+      "handler": "Physiotherapists.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

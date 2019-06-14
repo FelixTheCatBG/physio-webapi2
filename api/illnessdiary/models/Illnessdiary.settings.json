@@ -1,22 +1,21 @@
 {
   "connection": "default",
-  "collectionName": "exercises",
+  "collectionName": "IllnessDiary",
   "info": {
-    "name": "exercises",
+    "name": "illnessdiary",
     "description": ""
   },
   "options": {
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "string"
     },
-    "videoLink": {
+    "resources": {
+      "type": "json"
+    },
+    "name": {
       "type": "string"
     }
   }

@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/exercises": {
+    "/physiotherapists": {
       "get": {
         "deprecated": false,
-        "description": "Find all the exercises's records",
+        "description": "Find all the physiotherapists's records",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve physiotherapists document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Exercises"
+                    "$ref": "#/components/schemas/Physiotherapists"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Physiotherapists"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new exercises record",
+        "description": "Create a new physiotherapists record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve physiotherapists document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Physiotherapists"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Physiotherapists"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercises"
+                "$ref": "#/components/schemas/NewPhysiotherapists"
               }
             }
           }
         }
       }
     },
-    "/exercises/count": {
+    "/physiotherapists/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of exercises documents",
+        "description": "Retrieve the numver of physiotherapists documents",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve physiotherapists document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Physiotherapists"
         ],
         "parameters": []
       }
     },
-    "/exercises/{_id}": {
+    "/physiotherapists/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one exercises record",
+        "description": "Find one physiotherapists record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve physiotherapists document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Physiotherapists"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Physiotherapists"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single exercises record",
+        "description": "Update a single physiotherapists record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve physiotherapists document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Physiotherapists"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Physiotherapists"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercises"
+                "$ref": "#/components/schemas/NewPhysiotherapists"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single exercises record",
+        "description": "Delete a single physiotherapists record",
         "responses": {
           "200": {
-            "description": "deletes a single exercises based on the ID supplied",
+            "description": "deletes a single physiotherapists based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Physiotherapists"
         ],
         "parameters": [
           {
@@ -508,10 +508,9 @@
   },
   "components": {
     "schemas": {
-      "Exercises": {
+      "Physiotherapists": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
@@ -520,27 +519,52 @@
           "name": {
             "type": "string"
           },
-          "description": {
+          "contact": {
             "type": "string"
           },
-          "videoLink": {
-            "type": "string"
+          "patients": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "initials": {
+                  "type": "string"
+                },
+                "illness": {
+                  "type": "string"
+                },
+                "physiotherapist": {
+                  "type": "string"
+                },
+                "illnessdiary": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
-      "NewExercises": {
-        "required": [
-          "name"
-        ],
+      "NewPhysiotherapists": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "description": {
+          "contact": {
             "type": "string"
           },
-          "videoLink": {
-            "type": "string"
+          "patients": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
@@ -548,7 +572,7 @@
   },
   "tags": [
     {
-      "name": "Exercises"
+      "name": "Physiotherapists"
     }
   ]
 }
