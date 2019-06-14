@@ -510,7 +510,8 @@
     "schemas": {
       "Exercises": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -518,12 +519,27 @@
           },
           "name": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "videoLink": {
+            "type": "string"
           }
         }
       },
       "NewExercises": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "videoLink": {
             "type": "string"
           }
         }
