@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/exercisediaries",
+      "handler": "Exercisediary.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exercisediaries/count",
+      "handler": "Exercisediary.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exercisediaries/:_id",
+      "handler": "Exercisediary.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/exercisediaries",
+      "handler": "Exercisediary.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/exercisediaries/:_id",
+      "handler": "Exercisediary.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/exercisediaries/:_id",
+      "handler": "Exercisediary.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

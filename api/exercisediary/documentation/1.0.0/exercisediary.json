@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/exercises": {
+    "/exercisediaries": {
       "get": {
         "deprecated": false,
-        "description": "Find all the exercises's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Exercises"
+                    "$ref": "#/components/schemas/Exercisediary"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Exercisediary"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new exercises record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Exercisediary"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Exercisediary"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercises"
+                "$ref": "#/components/schemas/NewExercisediary"
               }
             }
           }
         }
       }
     },
-    "/exercises/count": {
+    "/exercisediaries/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of exercises documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Exercisediary"
         ],
         "parameters": []
       }
     },
-    "/exercises/{_id}": {
+    "/exercisediaries/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one exercises record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Exercisediary"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Exercisediary"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single exercises record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Exercisediary"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Exercisediary"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercises"
+                "$ref": "#/components/schemas/NewExercisediary"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single exercises record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single exercises based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Exercisediary"
         ],
         "parameters": [
           {
@@ -508,39 +508,23 @@
   },
   "components": {
     "schemas": {
-      "Exercises": {
+      "Exercisediary": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "videoLink": {
-            "type": "string"
+          "Exercise": {
+            "type": "json"
           }
         }
       },
-      "NewExercises": {
-        "required": [
-          "name"
-        ],
+      "NewExercisediary": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "videoLink": {
-            "type": "string"
+          "Exercise": {
+            "type": "json"
           }
         }
       }
@@ -548,7 +532,7 @@
   },
   "tags": [
     {
-      "name": "Exercises"
+      "name": "Exercisediary"
     }
   ]
 }

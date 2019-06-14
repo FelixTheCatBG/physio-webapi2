@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/exercises": {
+    "/patients": {
       "get": {
         "deprecated": false,
-        "description": "Find all the exercises's records",
+        "description": "Find all the patients's records",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve patients document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Exercises"
+                    "$ref": "#/components/schemas/Patients"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Patients"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new exercises record",
+        "description": "Create a new patients record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve patients document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Patients"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Patients"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercises"
+                "$ref": "#/components/schemas/NewPatients"
               }
             }
           }
         }
       }
     },
-    "/exercises/count": {
+    "/patients/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of exercises documents",
+        "description": "Retrieve the numver of patients documents",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve patients document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Patients"
         ],
         "parameters": []
       }
     },
-    "/exercises/{_id}": {
+    "/patients/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one exercises record",
+        "description": "Find one patients record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve patients document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Patients"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Patients"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single exercises record",
+        "description": "Update a single patients record",
         "responses": {
           "200": {
-            "description": "Retrieve exercises document(s)",
+            "description": "Retrieve patients document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercises"
+                  "$ref": "#/components/schemas/Patients"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Patients"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercises"
+                "$ref": "#/components/schemas/NewPatients"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single exercises record",
+        "description": "Delete a single patients record",
         "responses": {
           "200": {
-            "description": "deletes a single exercises based on the ID supplied",
+            "description": "deletes a single patients based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercises"
+          "Patients"
         ],
         "parameters": [
           {
@@ -508,38 +508,81 @@
   },
   "components": {
     "schemas": {
-      "Exercises": {
+      "Patients": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "firstName": {
             "type": "string"
           },
-          "description": {
+          "initials": {
             "type": "string"
           },
-          "videoLink": {
+          "illness": {
             "type": "string"
+          },
+          "physiotherapist": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "contact": {
+                "type": "string"
+              },
+              "patients": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "illnessdiary": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "resources": {
+                "type": "json"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewExercises": {
-        "required": [
-          "name"
-        ],
+      "NewPatients": {
         "properties": {
-          "name": {
+          "firstName": {
             "type": "string"
           },
-          "description": {
+          "initials": {
             "type": "string"
           },
-          "videoLink": {
+          "illness": {
+            "type": "string"
+          },
+          "physiotherapist": {
+            "type": "string"
+          },
+          "illnessdiary": {
             "type": "string"
           }
         }
@@ -548,7 +591,7 @@
   },
   "tags": [
     {
-      "name": "Exercises"
+      "name": "Patients"
     }
   ]
 }

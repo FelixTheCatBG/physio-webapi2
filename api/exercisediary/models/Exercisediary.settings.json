@@ -1,0 +1,16 @@
+{
+  "connection": "default",
+  "collectionName": "ExerciseDiary",
+  "info": {
+    "name": "exercisediary",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Exercise": {
+      "type": "json"
+    }
+  }
+}
