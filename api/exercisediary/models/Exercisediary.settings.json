@@ -9,8 +9,23 @@
     "timestamps": true
   },
   "attributes": {
-    "Exercise": {
-      "type": "json"
+    "date": {
+      "type": "date"
+    },
+    "painscale": {
+      "type": "integer"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "exercisedailydiaries": {
+      "collection": "exercisedailydiary",
+      "via": "exercisediary"
+    },
+    "user": {
+      "model": "user",
+      "via": "exercisediaries",
+      "plugin": "users-permissions"
     }
   }
 }

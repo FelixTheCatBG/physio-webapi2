@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "Exercisedailydiary",
+  "info": {
+    "name": "exercisedailydiary",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "exercise": {
+      "model": "exercises"
+    },
+    "sets": {
+      "type": "integer"
+    },
+    "reps": {
+      "type": "integer"
+    },
+    "occurance": {
+      "type": "string"
+    },
+    "done": {
+      "type": "boolean"
+    },
+    "exercisediary": {
+      "model": "exercisediary",
+      "via": "exercisedailydiaries"
+    }
+  }
+}

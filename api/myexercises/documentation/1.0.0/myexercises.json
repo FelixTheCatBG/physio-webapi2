@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/exercisediaries": {
+    "/myexercises": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the myexercises's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve myexercises document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Exercisediary"
+                    "$ref": "#/components/schemas/Myexercises"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Myexercises"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new myexercises record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve myexercises document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Myexercises"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Myexercises"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercisediary"
+                "$ref": "#/components/schemas/NewMyexercises"
               }
             }
           }
         }
       }
     },
-    "/exercisediaries/count": {
+    "/myexercises/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of myexercises documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve myexercises document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Myexercises"
         ],
         "parameters": []
       }
     },
-    "/exercisediaries/{_id}": {
+    "/myexercises/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one myexercises record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve myexercises document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Myexercises"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Myexercises"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single myexercises record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve myexercises document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Myexercises"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Myexercises"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercisediary"
+                "$ref": "#/components/schemas/NewMyexercises"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single myexercises record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single myexercises based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Myexercises"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Exercisediary": {
+      "Myexercises": {
         "required": [
           "id"
         ],
@@ -516,43 +516,23 @@
           "id": {
             "type": "string"
           },
-          "date": {
-            "type": "string"
-          },
-          "painscale": {
-            "type": "integer"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "exercisedailydiaries": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "exercise": {
-                  "type": "string"
-                },
-                "sets": {
-                  "type": "integer"
-                },
-                "reps": {
-                  "type": "integer"
-                },
-                "occurance": {
-                  "type": "string"
-                },
-                "done": {
-                  "type": "boolean"
-                },
-                "exercisediary": {
-                  "type": "string"
-                }
+          "exercise": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "videoLink": {
+                "type": "string"
               }
             }
           },
@@ -612,22 +592,10 @@
           }
         }
       },
-      "NewExercisediary": {
+      "NewMyexercises": {
         "properties": {
-          "date": {
+          "exercise": {
             "type": "string"
-          },
-          "painscale": {
-            "type": "integer"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "exercisedailydiaries": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "user": {
             "type": "string"
@@ -638,7 +606,7 @@
   },
   "tags": [
     {
-      "name": "Exercisediary"
+      "name": "Myexercises"
     }
   ]
 }

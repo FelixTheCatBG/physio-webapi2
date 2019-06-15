@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/exercisediaries": {
+    "/exercisedailydiaries": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Exercisediary"
+                    "$ref": "#/components/schemas/Exercisedailydiary"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Exercisedailydiary"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Exercisedailydiary"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Exercisedailydiary"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercisediary"
+                "$ref": "#/components/schemas/NewExercisedailydiary"
               }
             }
           }
         }
       }
     },
-    "/exercisediaries/count": {
+    "/exercisedailydiaries/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Exercisedailydiary"
         ],
         "parameters": []
       }
     },
-    "/exercisediaries/{_id}": {
+    "/exercisedailydiaries/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Exercisedailydiary"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Exercisedailydiary"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Exercisedailydiary"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Exercisedailydiary"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercisediary"
+                "$ref": "#/components/schemas/NewExercisedailydiary"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Exercisedailydiary"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Exercisediary": {
+      "Exercisedailydiary": {
         "required": [
           "id"
         ],
@@ -516,120 +516,86 @@
           "id": {
             "type": "string"
           },
-          "date": {
-            "type": "string"
-          },
-          "painscale": {
-            "type": "integer"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "exercisedailydiaries": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "exercise": {
-                  "type": "string"
-                },
-                "sets": {
-                  "type": "integer"
-                },
-                "reps": {
-                  "type": "integer"
-                },
-                "occurance": {
-                  "type": "string"
-                },
-                "done": {
-                  "type": "boolean"
-                },
-                "exercisediary": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user": {
+          "exercise": {
             "required": [
               "id",
-              "username",
-              "email"
+              "name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
                 "type": "string"
               },
-              "email": {
+              "description": {
                 "type": "string"
               },
-              "provider": {
+              "videoLink": {
+                "type": "string"
+              }
+            }
+          },
+          "sets": {
+            "type": "integer"
+          },
+          "reps": {
+            "type": "integer"
+          },
+          "occurance": {
+            "type": "string"
+          },
+          "done": {
+            "type": "boolean"
+          },
+          "exercisediary": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
                 "type": "string"
               },
-              "password": {
+              "date": {
                 "type": "string"
               },
-              "resetPasswordToken": {
+              "painscale": {
+                "type": "integer"
+              },
+              "comment": {
                 "type": "string"
               },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "firstName": {
-                "type": "string"
-              },
-              "illnessdiary": {
-                "type": "string"
-              },
-              "exercisediaries": {
+              "exercisedailydiaries": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "myexercises": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "user": {
+                "type": "string"
               }
             }
           }
         }
       },
-      "NewExercisediary": {
+      "NewExercisedailydiary": {
         "properties": {
-          "date": {
+          "exercise": {
             "type": "string"
           },
-          "painscale": {
+          "sets": {
             "type": "integer"
           },
-          "comment": {
+          "reps": {
+            "type": "integer"
+          },
+          "occurance": {
             "type": "string"
           },
-          "exercisedailydiaries": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "done": {
+            "type": "boolean"
           },
-          "user": {
+          "exercisediary": {
             "type": "string"
           }
         }
@@ -638,7 +604,7 @@
   },
   "tags": [
     {
-      "name": "Exercisediary"
+      "name": "Exercisedailydiary"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "Myexercises",
+  "info": {
+    "name": "myexercises",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "exercise": {
+      "model": "exercises"
+    },
+    "user": {
+      "model": "user",
+      "via": "myexercises",
+      "plugin": "users-permissions"
+    }
+  }
+}

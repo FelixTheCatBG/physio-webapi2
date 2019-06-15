@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/illnessdiaries",
-      "handler": "Illnessdiary.find",
+      "path": "/exercisedailydiaries",
+      "handler": "Exercisedailydiary.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/illnessdiaries/count",
-      "handler": "Illnessdiary.count",
+      "path": "/exercisedailydiaries/count",
+      "handler": "Exercisedailydiary.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/illnessdiaries/:_id",
-      "handler": "Illnessdiary.findOne",
+      "path": "/exercisedailydiaries/:_id",
+      "handler": "Exercisedailydiary.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/illnessdiaries",
-      "handler": "Illnessdiary.create",
+      "path": "/exercisedailydiaries",
+      "handler": "Exercisedailydiary.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/illnessdiaries/:_id",
-      "handler": "Illnessdiary.update",
+      "path": "/exercisedailydiaries/:_id",
+      "handler": "Exercisedailydiary.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/illnessdiaries/:_id",
-      "handler": "Illnessdiary.destroy",
+      "path": "/exercisedailydiaries/:_id",
+      "handler": "Exercisedailydiary.destroy",
       "config": {
         "policies": []
       }
