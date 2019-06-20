@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "Feedback",
+  "info": {
+    "name": "feedback",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "painscale": {
+      "type": "integer"
+    },
+    "comment": {
+      "type": "string"
+    }
+  }
+}

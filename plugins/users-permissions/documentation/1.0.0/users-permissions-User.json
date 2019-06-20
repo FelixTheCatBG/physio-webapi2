@@ -1161,6 +1161,78 @@
                 }
               }
             }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "illnessdiary": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "resources": {
+                "type": "json"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "exercisediaries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "painscale": {
+                  "type": "integer"
+                },
+                "comment": {
+                  "type": "string"
+                },
+                "exercisedailydiaries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "myexercises": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "exercise": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1198,6 +1270,24 @@
           },
           "role": {
             "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "illnessdiary": {
+            "type": "string"
+          },
+          "exercisediaries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "myexercises": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/illnessdiaries",
-      "handler": "Illnessdiary.find",
+      "path": "/feedbacks",
+      "handler": "Feedback.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/illnessdiaries/count",
-      "handler": "Illnessdiary.count",
+      "path": "/feedbacks/count",
+      "handler": "Feedback.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/illnessdiaries/:_id",
-      "handler": "Illnessdiary.findOne",
+      "path": "/feedbacks/:_id",
+      "handler": "Feedback.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/illnessdiaries",
-      "handler": "Illnessdiary.create",
+      "path": "/feedbacks",
+      "handler": "Feedback.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/illnessdiaries/:_id",
-      "handler": "Illnessdiary.update",
+      "path": "/feedbacks/:_id",
+      "handler": "Feedback.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/illnessdiaries/:_id",
-      "handler": "Illnessdiary.destroy",
+      "path": "/feedbacks/:_id",
+      "handler": "Feedback.destroy",
       "config": {
         "policies": []
       }

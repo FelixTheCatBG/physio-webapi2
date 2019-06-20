@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/exercisediaries": {
+    "/feedbacks": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Exercisediary"
+                    "$ref": "#/components/schemas/Feedback"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Feedback"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Feedback"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Feedback"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercisediary"
+                "$ref": "#/components/schemas/NewFeedback"
               }
             }
           }
         }
       }
     },
-    "/exercisediaries/count": {
+    "/feedbacks/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Feedback"
         ],
         "parameters": []
       }
     },
-    "/exercisediaries/{_id}": {
+    "/feedbacks/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Feedback"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Feedback"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Exercisediary"
+                  "$ref": "#/components/schemas/Feedback"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Feedback"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewExercisediary"
+                "$ref": "#/components/schemas/NewFeedback"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Exercisediary"
+          "Feedback"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Exercisediary": {
+      "Feedback": {
         "required": [
           "id"
         ],
@@ -516,120 +516,20 @@
           "id": {
             "type": "string"
           },
-          "date": {
-            "type": "string"
-          },
           "painscale": {
             "type": "integer"
           },
           "comment": {
             "type": "string"
-          },
-          "exercisedailydiaries": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "exercise": {
-                  "type": "string"
-                },
-                "sets": {
-                  "type": "integer"
-                },
-                "reps": {
-                  "type": "integer"
-                },
-                "occurance": {
-                  "type": "string"
-                },
-                "done": {
-                  "type": "boolean"
-                },
-                "exercisediary": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "firstName": {
-                "type": "string"
-              },
-              "illnessdiary": {
-                "type": "string"
-              },
-              "exercisediaries": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "myexercises": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
-      "NewExercisediary": {
+      "NewFeedback": {
         "properties": {
-          "date": {
-            "type": "string"
-          },
           "painscale": {
             "type": "integer"
           },
           "comment": {
-            "type": "string"
-          },
-          "exercisedailydiaries": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "user": {
             "type": "string"
           }
         }
@@ -638,7 +538,7 @@
   },
   "tags": [
     {
-      "name": "Exercisediary"
+      "name": "Feedback"
     }
   ]
 }

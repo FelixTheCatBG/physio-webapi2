@@ -602,6 +602,24 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "illnessdiary": {
+                  "type": "string"
+                },
+                "exercisediaries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "myexercises": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

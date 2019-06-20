@@ -48,6 +48,20 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "illnessdiary": {
+      "model": "illnessdiary"
+    },
+    "exercisediaries": {
+      "collection": "exercisediary",
+      "via": "user"
+    },
+    "myexercises": {
+      "collection": "myexercises",
+      "via": "user"
     }
   },
   "collectionName": "users-permissions_user"
