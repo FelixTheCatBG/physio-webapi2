@@ -1,26 +1,20 @@
 {
   "connection": "default",
-  "collectionName": "IllnessDiary",
+  "collectionName": "Tester",
   "info": {
-    "name": "illnessdiary",
+    "name": "tester",
     "description": ""
   },
   "options": {
     "timestamps": true
   },
   "attributes": {
-    "description": {
-      "type": "string"
-    },
-    "resources": {
-      "type": "json"
-    },
     "name": {
       "type": "string"
     },
     "user": {
       "model": "user",
-      "via": "illnessdiary",
+      "via": "testers",
       "plugin": "users-permissions"
     }
   }

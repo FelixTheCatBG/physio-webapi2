@@ -587,6 +587,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "testers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

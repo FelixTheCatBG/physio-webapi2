@@ -1181,6 +1181,9 @@
               },
               "name": {
                 "type": "string"
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
@@ -1226,6 +1229,25 @@
                   "type": "string"
                 },
                 "exercise": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "testers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
                   "type": "string"
                 },
                 "user": {
@@ -1284,6 +1306,12 @@
             }
           },
           "myexercises": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "testers": {
             "type": "array",
             "items": {
               "type": "string"

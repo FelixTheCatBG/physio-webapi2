@@ -53,7 +53,8 @@
       "type": "string"
     },
     "illnessdiary": {
-      "model": "illnessdiary"
+      "model": "illnessdiary",
+      "via": "user"
     },
     "exercisediaries": {
       "collection": "exercisediary",
@@ -61,6 +62,10 @@
     },
     "myexercises": {
       "collection": "myexercises",
+      "via": "user"
+    },
+    "testers": {
+      "collection": "tester",
       "via": "user"
     }
   },

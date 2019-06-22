@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/illnessdiaries": {
+    "/testers": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Illnessdiary"
+                    "$ref": "#/components/schemas/Tester"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Tester"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Illnessdiary"
+                  "$ref": "#/components/schemas/Tester"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Tester"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIllnessdiary"
+                "$ref": "#/components/schemas/NewTester"
               }
             }
           }
         }
       }
     },
-    "/illnessdiaries/count": {
+    "/testers/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Tester"
         ],
         "parameters": []
       }
     },
-    "/illnessdiaries/{_id}": {
+    "/testers/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Illnessdiary"
+                  "$ref": "#/components/schemas/Tester"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Tester"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Illnessdiary"
+                  "$ref": "#/components/schemas/Tester"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Tester"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIllnessdiary"
+                "$ref": "#/components/schemas/NewTester"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Tester"
         ],
         "parameters": [
           {
@@ -508,19 +508,13 @@
   },
   "components": {
     "schemas": {
-      "Illnessdiary": {
+      "Tester": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "resources": {
-            "type": "json"
           },
           "name": {
             "type": "string"
@@ -587,14 +581,8 @@
           }
         }
       },
-      "NewIllnessdiary": {
+      "NewTester": {
         "properties": {
-          "description": {
-            "type": "string"
-          },
-          "resources": {
-            "type": "json"
-          },
           "name": {
             "type": "string"
           },
@@ -607,7 +595,7 @@
   },
   "tags": [
     {
-      "name": "Illnessdiary"
+      "name": "Tester"
     }
   ]
 }

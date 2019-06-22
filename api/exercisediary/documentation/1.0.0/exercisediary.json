@@ -552,6 +552,9 @@
                 },
                 "exercisediary": {
                   "type": "string"
+                },
+                "name": {
+                  "type": "string"
                 }
               }
             }
@@ -603,6 +606,12 @@
                 }
               },
               "myexercises": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "testers": {
                 "type": "array",
                 "items": {
                   "type": "string"
