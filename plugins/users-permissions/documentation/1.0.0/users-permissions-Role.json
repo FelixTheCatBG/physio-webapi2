@@ -626,6 +626,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "illnessbank": {
+                  "type": "string"
                 }
               }
             }

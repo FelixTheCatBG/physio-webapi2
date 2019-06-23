@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/illnessbanks",
+      "handler": "Illnessbank.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/illnessbanks/count",
+      "handler": "Illnessbank.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/illnessbanks/:_id",
+      "handler": "Illnessbank.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/illnessbanks",
+      "handler": "Illnessbank.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/illnessbanks/:_id",
+      "handler": "Illnessbank.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/illnessbanks/:_id",
+      "handler": "Illnessbank.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

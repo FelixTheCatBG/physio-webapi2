@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/illnessdiaries": {
+    "/illnessbanks": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Illnessdiary"
+                    "$ref": "#/components/schemas/Illnessbank"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Illnessbank"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Illnessdiary"
+                  "$ref": "#/components/schemas/Illnessbank"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Illnessbank"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIllnessdiary"
+                "$ref": "#/components/schemas/NewIllnessbank"
               }
             }
           }
         }
       }
     },
-    "/illnessdiaries/count": {
+    "/illnessbanks/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Illnessbank"
         ],
         "parameters": []
       }
     },
-    "/illnessdiaries/{_id}": {
+    "/illnessbanks/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Illnessdiary"
+                  "$ref": "#/components/schemas/Illnessbank"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Illnessbank"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Illnessdiary"
+                  "$ref": "#/components/schemas/Illnessbank"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Illnessbank"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIllnessdiary"
+                "$ref": "#/components/schemas/NewIllnessbank"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Illnessdiary"
+          "Illnessbank"
         ],
         "parameters": [
           {
@@ -508,19 +508,13 @@
   },
   "components": {
     "schemas": {
-      "Illnessdiary": {
+      "Illnessbank": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "resources": {
-            "type": "json"
           },
           "name": {
             "type": "string"
@@ -590,17 +584,14 @@
                 }
               }
             }
+          },
+          "Description": {
+            "type": "string"
           }
         }
       },
-      "NewIllnessdiary": {
+      "NewIllnessbank": {
         "properties": {
-          "description": {
-            "type": "string"
-          },
-          "resources": {
-            "type": "json"
-          },
           "name": {
             "type": "string"
           },
@@ -609,6 +600,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "Description": {
+            "type": "string"
           }
         }
       }
@@ -616,7 +610,7 @@
   },
   "tags": [
     {
-      "name": "Illnessdiary"
+      "name": "Illnessbank"
     }
   ]
 }

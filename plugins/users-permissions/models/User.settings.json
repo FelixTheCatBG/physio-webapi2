@@ -54,7 +54,7 @@
     },
     "illnessdiary": {
       "model": "illnessdiary",
-      "via": "user"
+      "via": "users"
     },
     "exercisediaries": {
       "collection": "exercisediary",
@@ -67,6 +67,10 @@
     "testers": {
       "collection": "tester",
       "via": "user"
+    },
+    "illnessbank": {
+      "model": "illnessbank",
+      "via": "users"
     }
   },
   "collectionName": "users-permissions_user"

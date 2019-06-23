@@ -1182,8 +1182,11 @@
               "name": {
                 "type": "string"
               },
-              "user": {
-                "type": "string"
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -1255,6 +1258,28 @@
                 }
               }
             }
+          },
+          "illnessbank": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Description": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1316,6 +1341,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "illnessbank": {
+            "type": "string"
           }
         }
       }

@@ -1,27 +1,24 @@
 {
   "connection": "default",
-  "collectionName": "IllnessDiary",
+  "collectionName": "IllnessBank",
   "info": {
-    "name": "illnessdiary",
+    "name": "illnessbank",
     "description": ""
   },
   "options": {
     "timestamps": true
   },
   "attributes": {
-    "description": {
-      "type": "string"
-    },
-    "resources": {
-      "type": "json"
-    },
     "name": {
       "type": "string"
     },
     "users": {
       "collection": "user",
-      "via": "illnessdiary",
+      "via": "illnessbank",
       "plugin": "users-permissions"
+    },
+    "Description": {
+      "type": "string"
     }
   }
 }
